@@ -14,10 +14,7 @@ namespace AutomationPOM
 
         public WebElements(IWebDriver driver) : base(driver)
         {
-            
-                PageFactory.InitElements(driver, this);
-               // wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10)); // Initialize WebDriverWait
-
+            PageFactory.InitElements(driver, this);// wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10)); // Initialize WebDriverWait
         }
 
         [FindsBy(How = How.Id, Using = "email")] public IWebElement userName { get; set; }

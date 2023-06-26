@@ -12,7 +12,23 @@ namespace AutomationPOM
         public BaseClass(IWebDriver driver)
         {
             this.driver = driver;
-            actions = new Actions(driver);
+           // GetScreenshot();
+            // actions = new Actions(driver);
+        }
+
+        public string GetScreenshot()
+        {
+            if (driver is ITakesScreenshot takesScreenshotDriver)
+            {
+                var file = takesScreenshotDriver.GetScreenshot();
+                var img = file.AsBase64EncodedString;
+
+                return img;
+            }
+            else
+            {
+                return null;
+            }
         }
 
     }
