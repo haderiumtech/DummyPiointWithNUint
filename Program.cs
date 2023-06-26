@@ -53,6 +53,7 @@ namespace AutomationPOM
             GenericFunctionClass GenericMethod = new GenericFunctionClass(driver);
             GenericMethod.locaterPageAssertion("Selenium Template");
             Thread.Sleep(5000);
+
         }
 
         [TearDown]
