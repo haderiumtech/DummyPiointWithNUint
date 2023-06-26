@@ -18,7 +18,7 @@ namespace DummyPiointWithNUint
 
         private static ExtentReports StartReporting()
         {
-            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)+ @"..\..\..\..\results\";
+            var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)+ @"..\..\..\..\Test Case Html Report\";
             if (extent==null)
             {
                 Directory.CreateDirectory(path);
